@@ -1,19 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-DemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--CameraVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CameraVC" customModule="vision_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0lK-7Y-f1I">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tyc-wU-OAs">
+                                        <rect key="frame" x="20" y="30" width="335" height="60"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="sLf-fz-UMD"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S3o-cY-Xhw">
+                                        <rect key="frame" x="20" y="615" width="75" height="32"/>
+                                        <color key="backgroundColor" red="0.96862745100000003" green="0.97647058819999999" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="14"/>
+                                        <state key="normal" title="FLASH OFF">
+                                            <color key="titleColor" red="0.84705882352941175" green="0.27843137254901962" blue="0.11764705882352941" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lEy-d6-EII">
+                                        <rect key="frame" x="280" y="519" width="75" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="9gF-J8-hkP"/>
+                                            <constraint firstAttribute="width" constant="75" id="rJ4-G0-1IT"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="128" id="ttK-cE-Cvc"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="zCX-d5-yNb"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.43921568630000002" green="0.6588235294" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="tyc-wU-OAs" firstAttribute="top" secondItem="0lK-7Y-f1I" secondAttribute="top" constant="30" id="2Tq-xt-Hqt"/>
+                                    <constraint firstAttribute="bottom" secondItem="lEy-d6-EII" secondAttribute="bottom" constant="20" id="7Q3-X8-DIr"/>
+                                    <constraint firstAttribute="bottom" secondItem="lEy-d6-EII" secondAttribute="bottom" constant="20" id="D3A-ZI-B9h"/>
+                                    <constraint firstItem="tyc-wU-OAs" firstAttribute="leading" secondItem="0lK-7Y-f1I" secondAttribute="leading" constant="20" id="GYA-LD-I8o"/>
+                                    <constraint firstAttribute="trailing" secondItem="tyc-wU-OAs" secondAttribute="trailing" constant="20" id="Qbf-dA-aNu"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="S3o-cY-Xhw" secondAttribute="trailing" constant="20" symbolic="YES" id="elL-ID-1gc"/>
+                                    <constraint firstItem="lEy-d6-EII" firstAttribute="trailing" secondItem="tyc-wU-OAs" secondAttribute="trailing" id="gLJ-Oe-VrF"/>
+                                    <constraint firstItem="S3o-cY-Xhw" firstAttribute="leading" secondItem="0lK-7Y-f1I" secondAttribute="leading" constant="20" id="jQX-Hm-Isv"/>
+                                    <constraint firstAttribute="bottom" secondItem="S3o-cY-Xhw" secondAttribute="bottom" constant="20" id="zoL-wb-Gfq"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0lK-7Y-f1I" secondAttribute="bottom" id="9zc-Kt-T1l"/>
+                            <constraint firstItem="0lK-7Y-f1I" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cHt-8q-aWs"/>
+                            <constraint firstItem="0lK-7Y-f1I" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="thL-bD-tkx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0lK-7Y-f1I" secondAttribute="trailing" id="wFj-gY-STR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8F5B889E2015110400701854 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5B889D2015110400701854 /* AppDelegate.swift */; };
-		8F5B88A02015110400701854 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5B889F2015110400701854 /* ViewController.swift */; };
+		8F5B88A02015110400701854 /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F5B889F2015110400701854 /* CameraVC.swift */; };
 		8F5B88A32015110400701854 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F5B88A12015110400701854 /* Main.storyboard */; };
 		8F5B88A62015110400701854 /* vision_app.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8F5B88A42015110400701854 /* vision_app.xcdatamodeld */; };
 		8F5B88A82015110400701854 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F5B88A72015110400701854 /* Assets.xcassets */; };
@@ -18,7 +18,7 @@
 /* Begin PBXFileReference section */
 		8F5B889A2015110300701854 /* vision-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "vision-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F5B889D2015110400701854 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8F5B889F2015110400701854 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8F5B889F2015110400701854 /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
 		8F5B88A22015110400701854 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8F5B88A52015110400701854 /* vision_app.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = vision_app.xcdatamodel; sourceTree = "<group>"; };
 		8F5B88A72015110400701854 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,8 +56,10 @@
 		8F5B889C2015110400701854 /* vision-app */ = {
 			isa = PBXGroup;
 			children = (
+				8F5B88B42015119F00701854 /* resources */,
+				8F5B88B32015119900701854 /* view */,
+				8F5B88B22015119100701854 /* controller */,
 				8F5B889D2015110400701854 /* AppDelegate.swift */,
-				8F5B889F2015110400701854 /* ViewController.swift */,
 				8F5B88A12015110400701854 /* Main.storyboard */,
 				8F5B88A72015110400701854 /* Assets.xcassets */,
 				8F5B88A92015110400701854 /* LaunchScreen.storyboard */,
@@ -65,6 +67,28 @@
 				8F5B88A42015110400701854 /* vision_app.xcdatamodeld */,
 			);
 			path = "vision-app";
+			sourceTree = "<group>";
+		};
+		8F5B88B22015119100701854 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				8F5B889F2015110400701854 /* CameraVC.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		8F5B88B32015119900701854 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		8F5B88B42015119F00701854 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F5B88A02015110400701854 /* ViewController.swift in Sources */,
+				8F5B88A02015110400701854 /* CameraVC.swift in Sources */,
 				8F5B889E2015110400701854 /* AppDelegate.swift in Sources */,
 				8F5B88A62015110400701854 /* vision_app.xcdatamodeld in Sources */,
 			);
@@ -279,6 +303,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WM62ZS3622;
 				INFOPLIST_FILE = "vision-app/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iosdeveloperturkey.vision-app";
@@ -293,6 +318,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WM62ZS3622;
 				INFOPLIST_FILE = "vision-app/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.iosdeveloperturkey.vision-app";
